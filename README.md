@@ -1,85 +1,71 @@
-# 🏡 California Housing Price Prediction (Standard)
+# 🏡 California Housing Price Prediction Standard
 
-This project aims to predict **median housing prices in California districts** using the **California Housing Dataset**.  
-The workflow follows the complete **machine learning pipeline** — from **Exploratory Data Analysis (EDA)** to **data preprocessing**, **model training**, and **evaluation**.
-
----
-
-## 📚 Project Overview
-
-The **California Housing Price Model** uses real-world housing data to analyze patterns and build predictive models.  
-This project is ideal for understanding how various factors — like **income, population, location, and housing age** — influence housing prices.
+This project builds a **Machine Learning model** to predict **median house prices** in different districts of California.  
+The workflow includes **Exploratory Data Analysis (EDA)**, **data preprocessing**, **feature engineering**, and **model training** to understand how factors such as location, income, and population affect housing prices.
 
 ---
 
-## 🧩 Project Objectives
+## 📘 Project Overview
 
-1. Perform **Exploratory Data Analysis (EDA)** to understand data patterns and correlations.  
-2. **Prepare and clean** the dataset for machine learning algorithms.  
-3. Implement **feature engineering** and **data transformations**.  
-4. Train various **regression models** (e.g., Linear Regression, Decision Tree, Random Forest).  
-5. Evaluate model performance using key metrics (MAE, RMSE, R²).  
-6. Optimize and fine-tune the best-performing model.
-
----
-
-## 🔍 Current Progress
-
-✅ **Exploratory Data Analysis (EDA)**  
-- Visualized geographical data using scatter plots (latitude vs longitude).  
-- Explored relationships between housing features and median house values.  
-- Identified correlations using heatmaps and pair plots.  
-- Detected missing values and outliers.  
-
-🚧 **Next Steps**  
-- Prepare the dataset for machine learning:
-  - Handle missing values and categorical attributes.  
-  - Create new derived features.  
-  - Scale and normalize the data.  
-- Split the dataset into **training and test sets**.  
-- Apply and compare different ML algorithms.
+The **California Housing Price Prediction** project uses the **California Census housing dataset**, commonly used in real-estate data science tasks.  
+The main goal is to:
+- Explore and visualize housing data.
+- Prepare and clean data for machine learning.
+- Train and evaluate predictive models.
+- Gain insights into key factors influencing prices.
 
 ---
 
-## 🧠 Technologies & Libraries Used
+## 🧠 Key Steps
 
-- **Python 3.x**  
-- **Pandas**, **NumPy** – Data manipulation  
-- **Matplotlib**, **Seaborn** – Data visualization  
-- **Scikit-learn** – Machine learning models and preprocessing  
-- **Jupyter Notebook** – Development environment  
+### 1. Exploratory Data Analysis (EDA)
+- Examined dataset structure and statistics.
+- Visualized distributions, correlations, and geographical relationships.
+- Detected and handled missing values and outliers.
+- Created geographical scatter plots (longitude vs latitude) showing median house values.
+
+### 2. Data Preprocessing
+- Handled missing values and categorical variables.
+- Created income categories for **stratified sampling**.
+- Performed **feature scaling** using StandardScaler.
+- Separated features and target variable for ML pipelines.
+
+### 3. Feature Engineering
+- Added new features such as:
+  - `rooms_per_household`
+  - `bedrooms_per_room`
+  - `population_per_household`
+- Improved dataset representativeness for model training.
+
+### 4. Model Building
+Trained multiple models and compared performance:
+- **Linear Regression**
+- **Decision Tree Regressor**
+- **Random Forest Regressor**
+- **Support Vector Regressor (SVR)**
+
+Metrics evaluated:
+- Root Mean Squared Error (RMSE)
+- Cross-validation scores
+
+### 5. Model Evaluation & Fine-Tuning
+- Performed **GridSearchCV** for hyperparameter tuning.
+- Selected the best model based on validation metrics.
+- Tested on a hold-out test set to estimate generalization performance.
 
 ---
 
-## 📊 Dataset
+## 🧩 Tech Stack
 
-- **Source:** California Housing Dataset (available via `sklearn.datasets.fetch_california_housing`)  
-- **Features Include:**
-  - `longitude`, `latitude` – Location  
-  - `housing_median_age` – Median age of houses  
-  - `total_rooms`, `total_bedrooms` – Size indicators  
-  - `population`, `households` – Demographics  
-  - `median_income` – Economic indicator  
-  - `median_house_value` – Target variable  
-
----
-
-## 🧮 Planned Models
-
-- **Linear Regression**  
-- **Decision Tree Regressor**  
-- **Random Forest Regressor**  
-- (Optional: Gradient Boosting / XGBoost for comparison)
+| Category | Tools / Libraries |
+|-----------|------------------|
+| Language | Python 🐍 |
+| Data Manipulation | Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn |
+| Environment | Jupyter Notebook |
 
 ---
 
-## 📈 Expected Outcome
 
-By the end of this project, we aim to:
-- Build an accurate and interpretable **house price prediction model**.  
-- Identify the **most influential features** driving house prices.  
-- Gain insights into the **California housing market**.
-
---- 
-💼 *AI | Data Science | Machine Learning Enthusiast*
 
